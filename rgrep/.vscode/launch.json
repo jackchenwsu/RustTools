@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug rgrep",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": ["build", "--bin", "rgrep"],
+        "filter": {
+          "name": "rgrep",
+          "kind": "bin"
+        }
+      },
+      "args": ["Rust", "../rust-fundamentals-qa.md"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
