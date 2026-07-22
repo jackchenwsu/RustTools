@@ -1,3 +1,9 @@
 .DS_Store
 .vscode/
 target/
+
+# Compiled exercise binaries — rustc emits them next to the .rs source with no
+# extension, so ignore extensionless files under exercises/ but keep sources.
+rustlings/exercises/**
+!rustlings/exercises/**/
+!rustlings/exercises/**/*.*
