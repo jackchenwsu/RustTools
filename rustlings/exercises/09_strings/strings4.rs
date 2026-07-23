@@ -1,6 +1,3 @@
-// Calls of this function should be replaced with calls of `string_slice` or `string`.
-fn placeholder() {}
-
 fn string_slice(arg: &str) {
     println!("{arg}");
 }
@@ -9,9 +6,6 @@ fn string(arg: String) {
     println!("{arg}");
 }
 
-// TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(…)` with either `string_slice(…)`
-// or `string(…)` depending on what you think each value is.
 fn main() {
     string_slice("blue");
 
@@ -19,11 +13,11 @@ fn main() {
 
     string(String::from("hi"));
 
-    string_slice("rust is fun!".to_owned());
+    string("rust is fun!".to_owned());
 
-    string_slice("nice weather".into());
+    string("nice weather".into());
 
-    string_slice(format!("Interpolation {}", "Station"));
+    string(format!("Interpolation {}", "Station"));
 
     // WARNING: This is byte indexing, not character indexing.
     // Character indexing can be done using `s.chars().nth(INDEX)`.
